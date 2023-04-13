@@ -13,11 +13,14 @@ class BaseNet(nn.Module):
     def __init__(self, in_dim, out_dim):
         super().__init__()
         # Selecting hidden layer size of 8 for now
-        self.hidden_size = 8
+        self.hidden_size = 128
+        self.hidden_size_2 = 64
         self.network = nn.Sequential(
             nn.Linear(in_dim, self.hidden_size),
             nn.ReLU(True),
-            nn.Linear(self.hidden_size, out_dim)
+            nn.Linear(self.hidden_size, self.hidden_size_2),
+            nn.ReLU(True),
+            nn.Linear(self.hidden_size_2, out_dim)
         )
     
     def forward(self, x):
