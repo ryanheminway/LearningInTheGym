@@ -129,7 +129,6 @@ def train_and_eval_model(env, model, df):
     # Create an instance of the pygad.torchga.TorchGA class that will build a 
     # population where each individual is a vector representing the weights
     # and biases of the model
-    # (TODO Ryan) How is weight initialization done here?
     torch_ga = torchga.TorchGA(model=model,
                                num_solutions=100)
 
@@ -138,8 +137,7 @@ def train_and_eval_model(env, model, df):
     num_parents_mating = 2 # Number of solutions to be selected as parents in the mating pool.
     initial_population = torch_ga.population_weights # Initial population of network weights
 
-    # (TODO Ryan) What settings do we want for (1) mutation type, (2) mutation rate,
-    # (3) crossover type, (4) crossover rate, (5) selection style, (6) elitism params
+
     ga_instance = pygad.GA(num_generations=num_generations, 
                            num_parents_mating=num_parents_mating, 
                            initial_population=initial_population,
