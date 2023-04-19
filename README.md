@@ -1,8 +1,10 @@
 # A Comparison of Neuroevolution and Q-Network Methods for Environments with Varying Reward Structures
 
+## Authors: Ryan Heminway and Danya Gordin
+
 ## Project Overview
 
-This repository stores the source code used for the CS5335 Robotics Final Project done by Ryan Heminway and Danya Gordin. The project is an exploration of Genetic Algorithms and Deep Q-Networks as approaches for learning in environments typically tackled via Reinforcement Learning. We use OpenAI Gymnasium environments (LunarLander-v2 and MountainCar-v0) as a testbed for the solutions. More specifically, our work investigates the effect of varying reward structures on the GA and DQN algorithms. In the end, we find that GA is a competitive alternative to DQN especically for sparse reward environments. For more details, please refer to the paper which is uncluded in the repository.
+This repository stores the source code used for the CS5335 Robotics Final Project. The project is an exploration of Genetic Algorithms and Deep Q-Networks as approaches for learning in environments typically tackled via Reinforcement Learning. We use OpenAI Gymnasium environments (LunarLander-v2 and MountainCar-v0) as a testbed for the solutions. More specifically, our work investigates the effect of varying reward structures on the GA and DQN algorithms. In the end, we find that GA is a competitive alternative to DQN especically for sparse reward environments. For more details, please refer to the paper which is uncluded in the repository.
 
 ## Repository Breakdown
 
