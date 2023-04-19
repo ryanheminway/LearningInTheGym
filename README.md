@@ -1,4 +1,4 @@
-# A Comparison of Neuroevolution and Q-Network Methods for Environments with Varying Reward Structures
+# Navigating Reward Structures: A Comparison of Deep Q-Learning and Genetic Algorithms in Diverse Environments
 
 ## Authors: Ryan Heminway and Danya Gordin
 
