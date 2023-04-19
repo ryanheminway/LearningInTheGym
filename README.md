@@ -1,9 +1,9 @@
-This repository stores the source code used for the CS5335 Robotics Final Project done by Ryan Heminway and Danya Gordin. The project is an exploration of Genetic Algorithms and Q-Networks as approaches for learning in environments typically tackled via Reinforcement Learning. We use OpenAI Gymnasium environments as a testbed for the solutions.
+# A Comparison of Neuroevolution and Q-Network Methods for Environments with Varying Reward Structures
 
-# File Overview
+## Project Overview
 
-`gaTraining.py` -- Trains a GA on a given Gymnasium environment using PyGAD. Run it with `python gaTraining.py`. It will print the fitness of the best individual in the population at each generation, then display a graph of the results. Once you close the graph, it will load the best found model and run the environment with `render_mode="human"` so you can see the results.
+This repository stores the source code used for the CS5335 Robotics Final Project done by Ryan Heminway and Danya Gordin. The project is an exploration of Genetic Algorithms and Deep Q-Networks as approaches for learning in environments typically tackled via Reinforcement Learning. We use OpenAI Gymnasium environments (LunarLander-v2 and MountainCar-v0) as a testbed for the solutions. More specifically, our work investigates the effect of varying reward structures on the GA and DQN algorithms. In the end, we find that GA is a competitive alternative to DQN especically for sparse reward environments. For more details, please refer to the paper which is uncluded in the repository.
 
-`networks.py` -- General Neural Network definition in PyTorch. These networks should be used in both the GA and QDL settings. The `BaseNet` class is a general feed-forward linear MLP with one hidden layer. The subclasses of `MountainCarNet` and `LunarLanderNet` specify the correct input and output dimensions for their respective environments.
+## Repository Breakdown
 
-`requirements.txt` and `environment.yml` -- Lists of packages I used for the python environment. Two formats of the same information. I use Anaconda for my Python environment management. 
+All implementation work was done in Python. Most of the code was implemented and executed in Google Colab, with some experiments being executed on the Northeastern Discover Computing Cluster for the ability to parallelize multiple runs at once. At the root level of the project, there are self-sufficient Colab notebooks for training and evaluating GA and DQN models on the LunarLander-v2 and MountainCar-v0 environments. Additionally, the `slurm` folder holds python scripts and resources for executing GA experiments on the Discover cluster using the Slurm resource allocation toolset. Within the `slurm` folder, there is an additional `pyenv` folder which has two formats for describing the full Python Conda environment used for the experiments. 
